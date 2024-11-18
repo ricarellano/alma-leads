@@ -54,19 +54,19 @@ Key files:
 
 ## Design Choices
 
-1. **Next.js App Router**: We chose to use Next.js with the App Router for its built-in API routes, server-side rendering capabilities, and simplified routing system.
+1. **Next.js App Router**: I chose to use Next.js with the App Router for its built-in API routes, server-side rendering capabilities, and simplified routing system.
 
-2. **Redux Toolkit**: For state management, we opted for Redux Toolkit to manage the global state of leads. This allows for easy scaling and management of complex state logic.
+2. **Redux Toolkit**: For state management, I opted for Redux Toolkit to manage the global state of leads. This allows for easy scaling and management of complex state logic.
 
-3. **Tailwind CSS**: We used Tailwind CSS for styling to ensure rapid development and consistent design across the application.
+3. **Tailwind CSS**: I used Tailwind CSS for styling to ensure rapid development and consistent design across the application.
 
 4. **shadcn/ui**: This component library was chosen for its high-quality, accessible components that integrate well with Tailwind CSS.
 
-5. **Zod**: For form validation, we used Zod to create a robust schema-based validation system that integrates well with TypeScript.
+5. **Zod**: For form validation, I used Zod to create a robust schema-based validation system that integrates well with TypeScript.
 
 6. **Responsive Design**: The application is built with a mobile-first approach, ensuring it works well on various screen sizes.
 
-7. **Separation of Concerns**: We separated the public lead form and admin interface to maintain clear boundaries between different parts of the application.
+7. **Separation of Concerns**: I separated the public lead form and admin interface to maintain clear boundaries between different parts of the application.
 
 ## Technologies Used
 
