@@ -5,9 +5,10 @@ This application is designed to manage leads for an immigration law firm, provid
 ## Table of Contents
 
 1. [Running the Application Locally](#running-the-application-locally)
-2. [Project Structure](#project-structure)
-3. [Design Choices](#design-choices)
-4. [Technologies Used](#technologies-used)
+2. [Navigating the Application](#navigating-the-application)
+3. [Project Structure](#project-structure)
+4. [Design Choices](#design-choices)
+5. [Technologies Used](#technologies-used)
 
 ## Running the Application Locally
 
@@ -36,6 +37,35 @@ To run this application on your local machine, follow these steps:
    ```
 
 5. Open your browser and navigate to `http://localhost:3000`
+
+## Navigating the Application
+
+1. **Public Lead Submission Form**
+- URL: `http://localhost:3000/`
+- This is the landing page of the application.
+- Potential clients can fill out their information and submit it as a new lead.
+- Fields include personal details, visa preferences, and additional information.
+
+2. **Admin Login**
+- URL: `http://localhost:3000/admin/login`
+- Use the following mock credentials to log in:
+  - Email: admin@example.com
+  - Password: password123
+
+3. **Admin Dashboard**
+- URL: `http://localhost:3000/admin/leads`
+- After logging in, you'll be redirected to the admin dashboard.
+- Here you can view all submitted leads, search for specific leads, and filter by status.
+
+4. **Lead Management**
+- On the admin dashboard, you can:
+  - View lead details including name, submission date, status, and country.
+  - Update lead status from "Pending" to "Reached Out".
+  - Use the search bar to find specific leads.
+  - Filter leads by status using the dropdown menu.
+
+5. **Pagination**
+- Navigate through multiple pages of leads using the pagination controls at the bottom of the lead list.
 
 ## Project Structure
 
