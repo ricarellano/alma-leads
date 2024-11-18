@@ -6,8 +6,6 @@ export async function PATCH(
 ) {
   const id = params.id
   const { status } = await request.json()
-
-  console.log('params', id)
   
   return NextResponse.json({ id, status }, { status: 200 })
 }

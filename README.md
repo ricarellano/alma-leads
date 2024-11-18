@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alma leads Application
 
-## Getting Started
+This application is designed to manage leads for an immigration law firm, providing a public form for lead submission and an admin interface for lead management.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. [Running the Application Locally](#running-the-application-locally)
+2. [Project Structure](#project-structure)
+3. [Design Choices](#design-choices)
+4. [Technologies Used](#technologies-used)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the Application Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To run this application on your local machine, follow these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository:
+   ```
+   git clone https://github.com/ricarellano/alma-leads.git
+   cd alma-leads
+   ```
 
-## Learn More
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add the following:
+   ```
+   NEXT_PUBLIC_API_URL=http://localhost:3000/api
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Run the development server:
+   ```
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. Open your browser and navigate to `http://localhost:3000`
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project follows a standard Next.js structure with some additional organization:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `/app`: Contains the main application pages and API routes
+- `/components`: Reusable React components
+- `/lib`: Utility functions and Redux store setup
+- `/public`: Static assets
+
+Key files:
+- `/app/page.tsx`: The main landing page with the lead form
+- `/app/admin/leads/page.tsx`: The admin interface for managing leads
+- `/components/LeadForm.tsx`: The lead submission form component
+- `/lib/features/leadsSlice.ts`: Redux slice for managing lead state
+
+## Design Choices
+
+1. **Next.js App Router**: We chose to use Next.js with the App Router for its built-in API routes, server-side rendering capabilities, and simplified routing system.
+
+2. **Redux Toolkit**: For state management, we opted for Redux Toolkit to manage the global state of leads. This allows for easy scaling and management of complex state logic.
+
+3. **Tailwind CSS**: We used Tailwind CSS for styling to ensure rapid development and consistent design across the application.
+
+4. **shadcn/ui**: This component library was chosen for its high-quality, accessible components that integrate well with Tailwind CSS.
+
+5. **Zod**: For form validation, we used Zod to create a robust schema-based validation system that integrates well with TypeScript.
+
+6. **Responsive Design**: The application is built with a mobile-first approach, ensuring it works well on various screen sizes.
+
+7. **Separation of Concerns**: We separated the public lead form and admin interface to maintain clear boundaries between different parts of the application.
+
+## Technologies Used
+
+- Next.js 15+ (App Router)
+- React 19+
+- Redux Toolkit
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Zod
+- React Hook Form
